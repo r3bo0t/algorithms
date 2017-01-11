@@ -1,3 +1,8 @@
+# Quick find search for dynamic connectivity problem
+# initialize: O(n)
+# find: O(1)
+# union: O(n)
+#
 class QF
   attr_accessor :nodes
   def initialize n

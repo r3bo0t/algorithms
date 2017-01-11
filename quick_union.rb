@@ -1,3 +1,8 @@
+# Quick Union search 
+# initialize: O(n)
+# find: O(n) in worst case, if tree is one big linear relation
+# union: O(n) in worst case
+# 
 class QU
   def initialize n
     @nodes = Array.new

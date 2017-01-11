@@ -1,9 +1,6 @@
-# Weighted Quick union 
-# initialize: O(1)
-# find: O(logN)
-# union: O(logN)
-#
-class WeightedQU
+# weighted Quick Union with path Compression
+
+class WeightedQUCompressed
   def initialize n
     @nodes = Array.new
     @weight = Array.new
@@ -32,6 +29,7 @@ class WeightedQU
 
   private def root p
     while @nodes[p] != p
+      @nodes[p] = @nodes[@nodes[p]] # path compression for making tree linear
       p = @nodes[p]
     end
     p
